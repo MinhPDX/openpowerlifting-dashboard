@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <RECORD>
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="255" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="5" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="5" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="50" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="5" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="6" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="7" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="8" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="9" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="10" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="11" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="12" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="13" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="14" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="15" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="16" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="17" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="18" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="19" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="20" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="21" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="22" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="23" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="24" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="25" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="26" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="27" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="28" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="29" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="30" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="31" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="32" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="5" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="33" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="50" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="34" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="50" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="35" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="50" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="36" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="50" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="37" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="38" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="50" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="39" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="50" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="40" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="41" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="255" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="42" xsi:type="CharTerm" TERMINATOR="\n" MAX_LENGTH="5" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+ </RECORD>
+ <ROW>
+  <COLUMN SOURCE="1" NAME="Name" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="2" NAME="Sex" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="3" NAME="Event" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="4" NAME="Equipment" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="5" NAME="Age" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="6" NAME="AgeClass" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="7" NAME="BirthYearClass" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="8" NAME="Division" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="9" NAME="BodyweightKg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="10" NAME="WeightClassKg" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="11" NAME="Squat1Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="12" NAME="Squat2Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="13" NAME="Squat3Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="14" NAME="Squat4Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="15" NAME="Best3SquatKg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="16" NAME="Bench1Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="17" NAME="Bench2Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="18" NAME="Bench3Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="19" NAME="Bench4Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="20" NAME="Best3BenchKg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="21" NAME="Deadlift1Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="22" NAME="Deadlift2Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="23" NAME="Deadlift3Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="24" NAME="Deadlift4Kg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="25" NAME="Best3DeadliftKg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="26" NAME="TotalKg" xsi:type="SQLDECIMAL"/>
+  <COLUMN SOURCE="27" NAME="Place" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="28" NAME="Dots" xsi:type="SQLFLT8"/>
+  <COLUMN SOURCE="29" NAME="Wilks" xsi:type="SQLFLT8"/>
+  <COLUMN SOURCE="30" NAME="Glossbrenner" xsi:type="SQLFLT8"/>
+  <COLUMN SOURCE="31" NAME="Goodlift" xsi:type="SQLFLT8"/>
+  <COLUMN SOURCE="32" NAME="Tested" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="33" NAME="Country" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="34" NAME="State" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="35" NAME="Federation" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="36" NAME="ParentFederation" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="37" NAME="Date" xsi:type="SQLDATE"/>
+  <COLUMN SOURCE="38" NAME="MeetCountry" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="39" NAME="MeetState" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="40" NAME="MeetTown" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="41" NAME="MeetName" xsi:type="SQLNVARCHAR"/>
+  <COLUMN SOURCE="42" NAME="Sanctioned" xsi:type="SQLNVARCHAR"/>
+ </ROW>
+</BCPFORMAT>

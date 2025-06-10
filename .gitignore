@@ -1,0 +1,44 @@
+# ===================================================================
+# .gitignore for Data Analysis Project (SQL, Python, Power BI)
+# ===================================================================
+
+# --- Data Files ---
+# NEVER commit large raw data files.
+*.csv
+*.xlsx
+*.json
+
+# --- Python ---
+# Ignore virtual environment folders
+venv/
+*.venv
+env/
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# --- SQL Server ---
+# Ignore user-specific settings or backup files
+*.bak
+*.trc
+
+# --- Power BI ---
+# Power BI creates a backup file when you save. Ignore it.
+*.pbix.backup
+
+# --- Operating System Files ---
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- IDE / Editor Files ---
+# VS Code
+.vscode/

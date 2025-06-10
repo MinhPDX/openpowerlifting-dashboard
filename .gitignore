@@ -26,6 +26,7 @@ __pycache__/
 
 # --- Power BI ---
 # Power BI creates a backup file when you save. Ignore it.
+*.pbix
 *.pbix.backup
 
 # --- Operating System Files ---

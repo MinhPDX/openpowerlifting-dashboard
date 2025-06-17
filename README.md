@@ -1,5 +1,7 @@
 # 🏋️‍♀️ Powerlifting Data Analysis and Visualization Project
 
+![Screenshot 2025-06-17 at 16-30-12 Lifter Details - OpenPowerlifting Dashboard - Power BI](https://github.com/user-attachments/assets/10202d73-0ea8-4d74-8c48-e2e5140dc3c2)
+[OpenPowerlifting Dashboard - Power BI](https://app.powerbi.com/links/oHeCmjs9sV?ctid=983bb12d-4704-4fe3-a862-f064ed80292d&pbi_source=linkShare&bookmarkGuid=41bf3263-bd98-4bc1-b869-93fe84f7e8bb)
 ## 📜 Project Overview
 
 This project documents the end-to-end process of building a comprehensive data analysis solution for the OpenPowerlifting dataset. It begins with raw CSV data, establishes a robust data pipeline into a SQL Server database, and culminates in a sophisticated, multi-page, interactive Power BI dashboard designed for both high-level analysis and detailed individual exploration.
@@ -104,7 +106,6 @@ IF(
         FORMAT(MeetResults[TotalKg], "General Number")
     )
 )
-
 ```
 
 ---

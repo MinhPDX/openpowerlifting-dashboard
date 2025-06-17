@@ -2,7 +2,9 @@
 
 ## 📜 Project Overview
 
-This project is a comprehensive, end-to-end analysis of the OpenPowerlifting dataset. The goal was to build a full data pipeline, starting from a raw CSV data source, moving through a robust SQL database, and culminating in a multi-page, interactive Power BI dashboard. This repository documents the entire process, showcasing key skills in data engineering, database management, and business intelligence.
+This project documents the end-to-end process of building a comprehensive data analysis solution for the OpenPowerlifting dataset. It begins with raw CSV data, establishes a robust data pipeline into a SQL Server database, and culminates in a sophisticated, multi-page, interactive Power BI dashboard designed for both high-level analysis and detailed individual exploration.
+
+This repository showcases key skills in data engineering, database design, database management, advanced DAX, user-centric dashboard development, and business intelligence.
 
 ---
 
@@ -14,11 +16,12 @@ This initial phase focused on building a robust, reliable, and well-designed dat
 
 - **Database:** Microsoft SQL Server
 - **Database Tools:** SQL Server Management Studio (SSMS)
+- **Automation Scripting:** Python
 - **Version Control:** Git & GitHub
 
 ### 2. The Data Loading Challenge: A Staging Table Approach
 
-Loading a multi-gigabyte CSV file with over 40 columns presented a significant real-world data engineering challenge. Initial attempts to load the data directly into a pre-formatted table using `BULK INSERT` and `OPENROWSET` failed due to a subtle but critical issue: the import process was rounding decimal values, leading to a loss of precision for all lift data.
+Loading a CSV file with over 40 columns presented a significant real-world data engineering challenge. Initial attempts to load the data directly into a pre-formatted table using `BULK INSERT` and `OPENROWSET` failed due to a subtle but critical issue: the import process was rounding decimal values, leading to a loss of precision for all lift data.
 
 To solve this, a professional, industry-standard **staging table pattern** was implemented.
 
@@ -30,9 +33,19 @@ This two-step process completely solved the data integrity issue and created a r
 
 ---
 
-## Phase 2: 📊 Power BI Data Modeling & Transformation
+## Phase 2: 🤖 Automation of the Data Pipeline
 
-Once the data was reliably in SQL Server, the focus shifted to preparing it for analysis in Power BI.
+To ensure the dashboard can be updated with the latest data efficiently, the entire data ingestion process was automated.
+
+- **Python for Data Retrieval:** A Python script was developed to handle the data download. It automatically fetches the latest `openpowerlifting-latest.zip` file from the source, intelligently finds the dynamically named `.csv` file within the archive, and saves it to a consistent local path for the SQL Server to access.
+- **SQL Stored Procedure:** The entire multi-step SQL process (clearing tables, loading to staging, transforming and loading to the final table) was encapsulated into a single, reusable **Stored Procedure** named `dbo.sp_RefreshMeetResults`. This is a professional best practice that makes the database refresh process a single, callable command.
+- **Scheduling:** This pipeline is designed to be fully automated using a tool like Windows Task Scheduler, which can be configured to run the Python download script and then execute the SQL stored procedure on a recurring basis (e.g., weekly or monthly).
+
+---
+
+## Phase 3: 📊 Power BI Data Modeling & Transformation
+
+Once the data was reliably in SQL Server, the focus shifted to preparing it for analysis in Power BI and creating a powerful and user-friendly report.
 
 ### 1. Data Transformation in Power Query
 
@@ -41,13 +54,15 @@ Inside the Power Query Editor, several key transformations were performed:
 - **Handling Nulls:** Replaced `null` values in all numeric lift and score columns with `0` to ensure accurate calculations.
 - **Creating a Dynamic Date Table:** A best-practice, dynamic Date Table was created using M code. This table automatically determines the start and end dates from the main `MeetResults` table and generates a complete calendar, which is essential for powerful time-intelligence analysis.
 
+* **Data Modeling for Comparison:** To enable the side-by-side lifter comparison feature, the `MeetResults` query was duplicated to create a second, **disconnected table** called `MeetResults_Comparison`. This advanced technique allows two slicers on the same page to filter two independent datasets.
+
 ### 2. Data Modeling
 
 In the Model view, a clean star schema was established by creating a **one-to-many relationship** between the `Date Table` (the "one" side) and the `MeetResults` table (the "many" side) on their respective `Date` columns.
 
 ---
 
-## Phase 3: 📈 Dashboard Development
+## Phase 4: 📈 Dashboard Development
 
 The final phase focused on creating an intuitive, multi-page report to explore the data.
 
@@ -63,12 +78,15 @@ This page provides a high-level summary of the entire dataset.
   - A **Treemap** provides a powerful alternative to a map visual, showing the distribution of lifters by country.
 - **Interactivity:** **Slicers** for `Equipment` and `Federation` (formatted as a dropdown) were added to allow users to dynamically filter the entire report.
 
-### 2. The "Lifter Details" Page
+### Page 2: The "Lifter Details & Comparison" Page
 
-This page was designed as a user-centric tool for lifters to analyze their own performance.
+This page was designed as a powerful tool for lifters to analyze their own performance and compare themselves to others.
 
-- **Search Functionality:** A searchable **Slicer** on the `Name` column allows a user to easily find and select any lifter from the dataset.
-- **Competition History Table:** The core of this page is a detailed `Table` visual that replicates the functionality of the OpenPowerlifting website, showing a lifter's complete competition history.
+- **Data Modeling for Comparison:** To enable the side-by-side lifter comparison feature, the `MeetResults` query was duplicated to create a second, **disconnected table** called `MeetResults_Comparison`. This advanced technique allows two slicers on the same page to filter two independent datasets.
+- **Dual Slicer Functionality:** Two independent, searchable slicers allow the user to select "Lifter 1" and "Lifter 2".
+- **Side-by-Side History:** Two separate tables display the complete competition history for each selected lifter.
+- **KPI Comparison:** A series of **Card** visuals at the top of the page provides an "at-a-glance" comparison of the two lifters' personal bests (Squat, Bench, Deadlift, Total, and DOTS) and calculates the absolute **Difference** between them.
+- **Advanced DAX for Formatting:** To overcome a persistent Power BI formatting bug with trailing zeros, custom DAX measures using the `FORMAT` function were written to ensure all numbers are displayed cleanly and correctly.
 
 ### 3. Advanced DAX for Custom Formatting
 
@@ -88,3 +106,12 @@ IF(
 )
 
 ```
+
+---
+
+### The Final Dashboard
+
+The report consists of two main pages:
+
+1.  **The "Overview" Dashboard:** Provides a high-level summary of the entire dataset, featuring KPIs, trend charts, demographic breakdowns, and interactive slicers.
+2.  **The "Lifter Details & Comparison" Page:** A powerful tool for users to search for two individual lifters and compare their complete competition histories and personal bests side-by-side.
